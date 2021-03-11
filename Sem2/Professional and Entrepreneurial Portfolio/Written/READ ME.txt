@@ -1,0 +1,12 @@
+To play the PC version of the game please select the 'PC Standalone' file that is available from the menu you selected this document from
+(1024 x 768 WINDOWED is recommended)
+
+To test the game on the mobile platform please open the Unity project (MobileTest -> Assets -> Scenes -> Main Menu.unity)
+	- Ensure you have the Unity Remote 5 installed on your mobile device
+	- Connect device to computer
+	- Add device to your unity project by selcting Edit -> Project Settings -> Editor
+	- Press Play button
+	
+****** A built version is available on request *********
+
+A copy of the written work is avaiable in the the 'Written' folder

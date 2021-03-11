@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- REQUIRES ng-app SO THAT AngularJS KNOWS IT NEEDS TO PROCESS EVERYTHING WITHIN THE <html></html> TAGS -->
+<html lang="en" ng-app="MobileTech">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mobile Tech - Ongoing</title>
+		
+		<!-- ADD PIXI.JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.3.5/pixi.js"></script>
+		<script src="https://cdn.rawgit.com/kittykatattack/bump/2fe38b76/bin/bump.js"></script>
+		
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+		<!-- LIBRARY SCRIPTS - AngularJS DOES NOT WORK WITHOUT THESE -->
+		<!-- REPLACE THESE WITH LINKS TO THE SCRIPTS WITHIN 3rd_party FOLDER IF WORKING LOCALLY RATHER THAN ON PLUNKER - SEE VLE BASE PROJECT EXAMPLE -->
+		<script data-require="angular.js@1.5.0" data-semver="1.5.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+
+		<!-- STYLESHEETS - CONTROL HOW IT ALL LOOKS -->
+		<link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
+		
+		<!-- APP WIDE CSS (COMMON) TO BE APPLIED EVERYWHERE -->
+		<link rel="stylesheet" href="stylesheets/app.css">
+		
+		<!-- CUSTOM STYLESHEETS FOR OUR PAGES -->
+		<link rel="stylesheet" href="stylesheets/instructions.css">
+		<link rel="stylesheet" href="stylesheets/asteroids.css">
+
+	</head>
+	<!-- OVERARCHING CONTAINER CONTROLLER / NAMESPACE -->
+	<body ng-controller="HomeController as home">
+
+		<!-- ACCESS VARIABLE TIED TO HomeController DIRECTLY -->
+		<h3>
+			{{ home.appName }}
+		</h3>
+
+		<!-- ACCESS VARIABLE TIED TO $scope -->
+		
+
+		<!-- NAVIGATION CONTROLELR SECTION / NAMESPACE -->
+		<div id="nav" ng-controller="NavigationController as nav">
+			<ul class="nav nav-pills nav-justified">
+				<!-- navItems CAN BE FOUND IN THE CONTROLLER SCRIPT FILE, TIED TO $scope -->
+				<li ng-repeat="item in navItems">
+					<a href="#{{ item.link }}"> {{ item.title }} </a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- PAGES CONTROLLER SECTIONS / NAMESPACES - PAGE CONTENTS LOAD INSIDE THIS <div></div> -->
+		<div ng-view>
+			Loading ... THIS SHOULD BE OVERRIDEN ONCE A PAGE HAS BEEN LOADED
+		</div>
+
+		<!-- BELOW ARE CUSTOM APP SCRIPTS - WRITTEN BY US TO BRING THE APP TO LIFE -->
+
+		<!-- THIS IS THE APP SETUP SCRIPT -->
+		<script src="scripts/app.js"></script>
+
+		<!-- THIS IS THE NAVIGATION CONTROLLER SCRIPT -->
+		<script src="scripts/controllers/navigation.js"></script>
+
+		<!-- THE NEXT SCRIPTS ARE ALL APP PAGE CONTROLLERS i.e. APP PAGES -->
+		<script src="scripts/controllers/home.js"></script>
+		<script src="scripts/controllers/instructions.js"></script>
+		<script src="scripts/controllers/asteroids.js"></script>
+		<script src="scripts/controllers/leaderboard.js"></script>
+
+	</body>
+</html>

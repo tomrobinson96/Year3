@@ -1,0 +1,22 @@
+<div id="asteroids-page" ng-controller="AsteroidsController as ppong">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>
+          Name: 
+          <input type="text" ng-model="playerinput" ng-required = "true"> 
+          <button ng-click="DisplayName(playerinput)">Submit!</button>
+        </p>
+         <div id="screenButtons">
+          <!-- These buttons can actually be any visible element as long as the user can see it and click on it, even an image -->
+          <!-- The most important thing about these buttons is ng-click, it must be there to run the $scope.MakeFullScreen() / $scope.MakeSmallScreen() functions found in the controller -->
+          <button ng-click="MakeFullScreen()" ng-hide="isFullScreen">Fullscreen</button>
+          <button ng-click="MakeSmallScreen()" ng-show="isFullScreen">Smallscreen</button>
+        </div>
+        <div id="asteroids">
+          The Asteroids game will be loaded in here.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

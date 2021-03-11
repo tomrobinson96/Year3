@@ -1,0 +1,12 @@
+C:\Users\Tom\Documents\Year 3\AI - Text Summarisation Application\AI - Text Summarisation Application\bin\Debug\AI - Text Summarisation Application.exe.config
+C:\Users\Tom\Documents\Year 3\AI - Text Summarisation Application\AI - Text Summarisation Application\bin\Debug\AI - Text Summarisation Application.exe
+C:\Users\Tom\Documents\Year 3\AI - Text Summarisation Application\AI - Text Summarisation Application\bin\Debug\AI - Text Summarisation Application.pdb
+C:\Users\Tom\Documents\Year 3\AI - Text Summarisation Application\AI - Text Summarisation Application\obj\Debug\AI - Text Summarisation Application.csprojResolveAssemblyReference.cache
+C:\Users\Tom\Documents\Year 3\AI - Text Summarisation Application\AI - Text Summarisation Application\obj\Debug\AI - Text Summarisation Application.exe
+C:\Users\Tom\Documents\Year 3\AI - Text Summarisation Application\AI - Text Summarisation Application\obj\Debug\AI - Text Summarisation Application.pdb
+E:\AI - Text Summarisation Application\bin\Debug\AI - Text Summarisation Application.exe.config
+E:\AI - Text Summarisation Application\obj\Debug\AI - Text Summarisation Application.exe
+E:\AI - Text Summarisation Application\obj\Debug\AI - Text Summarisation Application.pdb
+E:\AI - Text Summarisation Application\bin\Debug\AI - Text Summarisation Application.exe
+E:\AI - Text Summarisation Application\bin\Debug\AI - Text Summarisation Application.pdb
+E:\AI - Text Summarisation Application\obj\Debug\AI - Text Summarisation Application.csprojResolveAssemblyReference.cache

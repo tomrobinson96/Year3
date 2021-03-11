@@ -1,0 +1,1 @@
+This game utilises Leap Motion technology to allow the player to walk around a maze trying to find the castle in the middle whilst also having to kill zombies on the way. 

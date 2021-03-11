@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- REQUIRES ng-app SO THAT AngularJS KNOWS IT NEEDS TO PROCESS EVERYTHING WITHIN THE <html></html> TAGS -->
+<html lang="en" ng-app="MobileTech">
+	<head>
+		<meta charset="UTF-8">
+		<title>Mobile Tech - Ongoing</title>
+
+		<!-- LIBRARY SCRIPTS - AngularJS DOES NOT WORK WITHOUT THESE -->
+		<script src="3rd_party/angularjs/angular.min.js"></script>
+		<script src="3rd_party/angularjs/angular-route.min.js"></script>
+
+		<!-- STYLESHEETS - CONTROL HOW IT ALL LOOKS -->
+		<link rel="stylesheet" href="3rd_party/bootstrap/bootstrap.min.css">
+		
+		<!-- APP WIDE CSS (COMMON) TO BE APPLIED EVERYWHERE -->
+		<link rel="stylesheet" href="stylesheets/app.css">
+		
+		<!-- CUSTOM STYLESHEETS FOR OUR PAGES -->
+		<link rel="stylesheet" href="stylesheets/dashboard.css">
+
+	</head>
+	<!-- OVERARCHING CONTAINER CONTROLLER / NAMESPACE -->
+	<body ng-controller="HomeController as home">
+
+		<!-- ACCESS VARIABLE TIED TO HomeController DIRECTLY -->
+		<p>
+			{{ "Hello!" }} - {{ home.appName }}
+		</p>
+
+		<!-- ACCESS VARIABLE TIED TO $scope -->
+		<p>
+			{{ weekName }}
+		</p>
+
+		<!-- NAVIGATION CONTROLELR SECTION / NAMESPACE -->
+		<div ng-controller="NavigationController as nav">
+			<ul>
+				<!-- navItems CAN BE FOUND IN THE CONTROLLER SCRIPT FILE, TIED TO $scope -->
+				<li ng-repeat="item in navItems">
+					<a href="#{{ item.link }}"> {{ item.title }} </a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- PAGES CONTROLLER SECTIONS / NAMESPACES - PAGE CONTENTS LOAD INSIDE THIS <div></div> -->
+		<div ng-view>
+			Loading ... THIS SHOULD BE OVERRIDEN ONCE A PAGE HAS BEEN LOADED
+		</div>
+
+		<!-- BELOW ARE CUSTOM APP SCRIPTS - WRITTEN BY US TO BRING THE APP TO LIFE -->
+
+		<!-- THIS IS THE APP SETUP SCRIPT -->
+		<script src="scripts/app.js"></script>
+
+		<!-- THIS IS THE NAVIGATION CONTROLLER SCRIPT -->
+		<script src="scripts/controllers/navigation.js"></script>
+
+		<!-- THE NEXT SCRIPTS ARE ALL APP PAGE CONTROLLERS i.e. APP PAGES -->
+		<script src="scripts/controllers/home.js"></script>
+		<script src="scripts/controllers/dashboard.js"></script>
+		<script src="scripts/controllers/login.js"></script>
+
+	</body>
+</html>

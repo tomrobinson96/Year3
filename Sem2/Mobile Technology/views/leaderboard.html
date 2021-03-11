@@ -1,0 +1,20 @@
+<div ng-controller="LeaderboardController as ldb">
+  This is the Leaderboard page.
+  
+  <button ng-click="ldb.ButtonClicked()" class="btn btn-primary">Click me!</button>
+  
+
+  <hr>
+  
+  <table class="table">
+    <tr>
+      <th>Score</th>
+      <th>Player Name</th>
+    </tr>
+    <tr ng-repeat="value in ldb.scoresFull">
+      <td>{{ value.score }}</td>
+      <td>{{ value.playerName }}</td>
+    </tr>
+  </table>
+  
+</div>
